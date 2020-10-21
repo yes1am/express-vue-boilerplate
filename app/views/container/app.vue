@@ -1,16 +1,41 @@
 <template>
   <h1>
-    {{ str }}
+    str: {{ str }}
+    <my-input v-model="str" />
+    <div />
+    <!-- input: {{ input }} -->
+    <!-- <el-input
+      :value="input"
+      placeholder="请输入内容"
+    /> -->
+    <!-- <my-input
+      :value="str"
+      @input="handleInput"
+    /> -->
   </h1>
 </template>
 
 <script>
 
+import Input from './input';
+
 export default {
+  components: {
+    MyInput: Input
+  },
   name: 'App',
   data() {
     return {
-      str: 'hello world!'
+      str: 'hello world!',
+      input: 'hello'
+    }
+  },
+  methods: {
+    handleInput(e) {
+      console.log(e);
+      // const value = e.target.value;
+      // this.str = value
+      // console.log();
     }
   }
 }

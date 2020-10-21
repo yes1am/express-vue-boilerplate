@@ -39,6 +39,6 @@ app.all('*', function (req, res) {
 app.listen(3005, '0.0.0.0', function () {
   console.log(`
 ===================================
-Example app listening on port 3004!
+Example app listening on port 3005!
 ===================================`)
 })
